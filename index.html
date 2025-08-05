@@ -28,6 +28,7 @@
         --grey-900: hsl(0, 0%, 8%);
       }
       * {
+        margin: 0;
         font-family: "Inter", sans-serif;
       }
       html {
@@ -35,28 +36,71 @@
         -webkit-text-size-adjust: 100%; /* 2 */
       }
       body {
-        margin: 0;
         height: 100vh;
         background-color: var(--grey-900);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        color: var(--white-normal);
       }
       article {
         background-color: var(--grey-800);
-        width: 240px;
+        width: 280px;
         padding: 1.5rem;
         border-radius: 6px;
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 1.25rem;
         align-items: center;
       }
 
+      .user-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+      }
       img {
         width: 4rem;
         border-radius: 50%;
+        margin-top: 0.5rem;
+      }
+
+      h2 {
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 0.875rem;
+        font-weight: 400;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--white-normal);
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      nav a {
+        background-color: var(--grey-700);
+        width: 100%;
+        padding: 0.75rem 0;
+        text-align: center;
+        border-radius: 0.25rem;
+        font-weight: 600;
+      }
+
+      .subtitle {
+        font-weight: 600;
+        color: var(--green-normal);
       }
 
       .attribution {
@@ -71,14 +115,18 @@
   <body>
     <article>
       <img src="assets/images/avatar-jessica.jpeg" alt="Jessica Randall Pic" />
-      Jessica Randall London, United Kingdom "Front-end developer and avid
-      reader." GitHub Frontend Mentor LinkedIn Twitter Instagram
+      <div class="user-info">
+        <h2>Jessica Randall</h2>
+        <p class="subtitle">London, United Kingdom</p>
+      </div>
+      <p>"Front-end developer and avid reader."</p>
+      <nav>
+        <a href="#">Github</a>
+        <a href="#">Frontend Mentor</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </nav>
     </article>
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
   </body>
 </html>
